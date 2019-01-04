@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">智能工具箱</string>
+    <string name="sleep_">您比</string>
+    <string name="sleep__">的人还要晚睡</string>
+    <string name="sleep___">保持活力充足的体魄，都需要一个好的睡眠</string>
+    <string name="sleep____">智能锁屏</string>
+    <string name="sleepHealth">睡眠助手</string>
+
+    <string name="redpackate_description">开启我给你抢红包</string>
+</resources>

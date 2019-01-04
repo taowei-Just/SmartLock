@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="F:\default\SmartLock\slidinglibrary\assets"/><source path="F:\default\SmartLock\slidinglibrary\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="F:\default\SmartLock\slidinglibrary\src\debug\assets"/></dataSet></merger>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.it_tao.smartlock.health.window.LifeNotifyView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/night01"
+    android:orientation="vertical"
+ 
+    >
+
+    <RelativeLayout
+        
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+       
+        >
+
+        <TextView
+            android:text="20:30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/background_light"
+            android:gravity="center"
+            android:id="@+id/tv_hour"
+            android:textSize="56dp"
+            android:layout_marginTop="40dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_week"
+            android:text="4月11号 周三"
+            android:textColor="@android:color/darker_gray"
+            android:layout_below="@id/tv_hour"
+            android:gravity="center"
+            android:textSize="18dp"
+            />
+
+
+     
+
+   
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+         
+        >
+
+
+
+        <TextView 
+            android:id="@+id/tv_prompt_2"
+        android:text="您比89%的人还要晚睡"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" 
+            android:gravity="center"
+
+        android:textColor="@color/color_hoary"
+            android:textSize="22dp"
+            android:layout_marginTop="120dp"
+            android:padding="5dp"
+       />
+ 
+
+        <TextView
+            android:textSize="16dp"
+            android:layout_below="@id/tv_prompt_2"
+            android:id="@+id/tv_prompt_1"
+            android:text="@string/sleep___"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@android:color/darker_gray"
+            android:padding="5dp"
+            />
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_prompt_1"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/lock"
+                android:layout_alignTop="@+id/tv_surplus_time"
+                android:layout_alignBottom="@+id/tv_surplus_time"
+                android:layout_toLeftOf="@+id/tv_surplus_time"
+                android:layout_toStartOf="@+id/tv_surplus_time"
+                android:padding="2dp"
+                />
+
+            <TextView
+                android:textSize="21dp"
+          
+                android:id="@+id/tv_surplus_time"
+                android:text="8小时48分"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/darker_gray"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true"
+
+                />
+            
+            
+        </RelativeLayout>
+
+       
+
+    </RelativeLayout>
+
+</com.it_tao.smartlock.health.window.LifeNotifyView>

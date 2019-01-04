@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+  
+ >
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/holo_blue_light"
+
+        >
+
+        <ImageView
+            android:id="@+id/iv_title_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:paddingBottom="13dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+
+            android:paddingTop="13dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_tilte_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="梦话录音机"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+    
+    
+    
+    
+    <ListView
+        android:id="@+id/lv_rec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bt_pause_rec"
+        android:layout_below="@+id/relativeLayout">
+        
+        
+        
+    </ListView>
+
+
+    <Button
+        android:text="暂停"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bt_start_rec"
+        android:layout_toRightOf="@+id/bt_start_rec"
+        android:layout_toEndOf="@+id/bt_start_rec"
+        android:id="@+id/bt_pause_rec" />
+
+    <Button
+        android:text="停止"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bt_pause_rec"
+        android:layout_toRightOf="@+id/bt_pause_rec"
+        android:layout_toEndOf="@+id/bt_pause_rec"
+        android:id="@+id/bt_stop_rec" />
+
+    <Button
+        android:text="智能录制"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bt_stop_rec"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/bt_smart_rec" />
+
+    <Button
+        android:text="开始录制"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/bt_start_rec"
+        android:layout_above="@+id/textView5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp" />
+
+    <TextView
+        android:text="智能监控音量"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView5"
+        android:layout_marginBottom="11dp"
+        android:layout_above="@+id/sb_valuem"
+        android:layout_alignLeft="@+id/bt_start_rec"
+        android:layout_alignStart="@+id/bt_start_rec"
+        android:textColor="@android:color/black"
+        />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/sb_valuem"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" 
+        android:layout_marginBottom="20dp"
+        
+        />
+    
+    <com.it_tao.smartlock.customview.CircleProgressView
+        
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/relativeLayout">
+         
+        
+    </com.it_tao.smartlock.customview.CircleProgressView>
+    
+
+</RelativeLayout>

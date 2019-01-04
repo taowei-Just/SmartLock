@@ -1,0 +1,92 @@
+import groovy.transform.Field
+
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'smartinstrument'
+            keyPassword 'smartinstrument04_24'
+            storeFile file('H:/Development_Project/GitHub/MyGitHub/SmartLock/SmartInstrument.jks')
+            storePassword 'smartinstrument_17_12_1'
+        }
+    }
+    compileSdkVersion 24
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+
+        applicationId "com.it_tao.smartlock"
+        minSdkVersion 18
+        targetSdkVersion 24
+        versionCode 9
+        versionName "7.9"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        String date = getDate()
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为appname-1.0-beta1-xxxx-xx-xx.apk
+                        def fileName = getDate() + "/" + "工具箱_" + versionName + ".apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    testCompile 'junit:junit:4.12'
+    compile files('libs/app_process_library.jar')
+    compile files('libs/bugly_crash_release.jar')
+    compile files('libs/android-v7-RecyclerView.jar')
+    compile project(':slidinglibrary')
+    compile project(':gloable')
+}
+
+//获取时间戳
+
+
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyy年MM月dd日')
+    return formattedDate
+}
+
+def getTime(){
+
+    def date = new Date()
+    def formattedDate = date.format('HH时mm分')
+    return formattedDate
+}
+//从androidManifest.xml中获取版本号
+def getVersionNameFromManifest() {
+    def manifestParser = new com.android.builder.core.DefaultManifestParser(android.sourceSets.main.manifest.srcFile)
+
+
+    return manifestParser.getVersionName();
+}
+
+def getAppName() {
+    def manifestParser = new com.android.builder.core.DefaultManifestParser(android.sourceSets.main.manifest.srcFile)
+
+
+    return manifestParser.getPackage();
+
+
+}

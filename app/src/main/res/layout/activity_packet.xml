@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_light_dark_gray">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="@android:color/holo_red_light">
+
+        <ImageView
+            android:id="@+id/iv_title_back"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:clickable="true"
+            android:paddingBottom="13dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+
+            android:paddingTop="13dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_tilte_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="抢红包设置"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/white">
+
+
+        <TextView
+            android:id="@+id/tv_restart_helper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="抢红包失败，重启辅助功能点我"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_marginTop="19dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout5">
+
+        <RelativeLayout
+            android:id="@+id/rl_hint_audio_switch"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/iv_hint_audio_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="提示音"
+                android:textSize="18dp"
+
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl__hint_audio_"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_light_dark_gray" />
+
+                <CheckBox
+                    android:id="@+id/cb__hint_audio_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/switch_selector"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/color_light_dark_gray"
+
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/rl_beep_switch"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/iv__beep__text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="震动提醒"
+                android:textSize="18dp"
+
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl__beep_"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_light_dark_gray" />
+
+                <CheckBox
+                    android:id="@+id/cb__beep_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/switch_selector"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:background="@color/color_light_dark_gray"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_wechart_switch"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/iv_wechart_packet_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:text="抢微信红包"
+                android:textSize="23dp"
+
+                />
+
+            <RelativeLayout
+                android:id="@+id/rl_cb"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingBottom="12dp"
+                android:paddingTop="12dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/color_light_dark_gray" />
+
+                <CheckBox
+                    android:id="@+id/cb_wechart_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/switch_selector"
+                    android:button="@null"
+                    android:gravity="center_vertical"
+
+                    />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_light_dark_gray"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_wechart_showList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_cb"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/iv_wechart_more_text"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+
+                android:text="更多设置"
+
+                android:textSize="20dp"
+
+                />
+
+            <CheckBox
+                android:id="@+id/cb_wechart_setting"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="3dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/unfold_selector"
+                android:button="@null" />
+
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/lv_wechart_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            >
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+          android:background="@android:color/white"
+          android:orientation="vertical"
+          android:id="@+id/linearLayout6"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_alignParentStart="true">
+
+          <RelativeLayout
+              android:id="@+id/rl_qq_switch"
+              android:layout_width="match_parent"
+              android:layout_height="60dp"
+              android:clickable="true">
+
+              <TextView
+                  android:id="@+id/iv_qq_packet_text"
+                  android:layout_width="wrap_content"
+                  android:layout_height="match_parent"
+                  android:layout_marginLeft="20dp"
+                  android:gravity="center_vertical"
+                  android:text="抢QQ红包"
+                  android:textSize="23dp"
+
+                  />
+
+              <RelativeLayout
+                  android:id="@+id/rl_qq_cb"
+                  android:layout_width="100dp"
+                  android:layout_height="match_parent"
+                  android:layout_alignParentRight="true"
+                  android:paddingBottom="12dp"
+                  android:paddingTop="12dp">
+
+                  <View
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginBottom="5dp"
+
+                      android:layout_marginLeft="8dp"
+                      android:layout_marginRight="8dp"
+                      android:layout_marginTop="5dp"
+                      android:background="@color/color_light_dark_gray" />
+
+                  <CheckBox
+                      android:id="@+id/cb_qq_switch"
+                      android:layout_width="wrap_content"
+                      android:layout_height="match_parent"
+                      android:background="@drawable/switch_selector"
+                      android:button="@null"
+                      android:gravity="center_vertical"
+
+                      />
+
+
+              </RelativeLayout>
+
+
+          </RelativeLayout>
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="1dp"
+              android:background="@color/color_light_dark_gray"
+
+              />
+
+          <RelativeLayout
+              android:id="@+id/rl_qq_showList"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/rl_cb"
+              android:clickable="true">
+
+              <TextView
+                  android:id="@+id/iv_qq_more_text"
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="20dp"
+
+                  android:text="更多设置"
+
+                  android:textSize="20dp"
+
+                  />
+
+              <CheckBox
+                  android:id="@+id/cb_qq_setting"
+                  android:layout_width="30dp"
+                  android:layout_height="30dp"
+                  android:layout_alignParentRight="true"
+                  android:layout_centerVertical="true"
+                  android:layout_marginBottom="3dp"
+                  android:layout_marginRight="20dp"
+                  android:layout_marginTop="3dp"
+                  android:background="@drawable/unfold_selector"
+                  android:button="@null" />
+
+
+          </RelativeLayout>
+
+
+          <ListView
+              android:id="@+id/lv_qq_setting"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:visibility="gone"
+              >
+
+          </ListView>
+      </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/side_shape"
+    android:gravity="center"
+    android:orientation="vertical"
+
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/rl_delay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+
+        <TextView
+            android:id="@+id/tv_item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="延时抢红包"
+            android:textSize="20dp" />
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_light_dark_gray" />
+
+            <CheckBox
+                android:id="@+id/cb_time_delay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/switch_selector"
+                android:button="@null"
+                android:gravity="center_vertical"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_time_random"
+        android:layout_width="match_parent"
+        android:layout_height="28dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp"
+        android:visibility="gone"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_random_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="时间随机   默认5s内随机  "
+            android:textSize="18dp" />
+
+        <RelativeLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_light_dark_gray" />
+
+            <CheckBox
+                android:id="@+id/cb_time_random"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/switch_selector"
+                android:button="@null"
+                android:gravity="center_vertical"
+
+                />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_assign_delay"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp"
+        android:visibility="gone"
+        >
+
+
+        <TextView
+            android:id="@+id/tv_time_"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="指定延时"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/et_deley_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@+id/tv_time_"
+            android:ems="5"
+            android:hint="是毫秒哦"
+            android:singleLine="true"
+            android:gravity="center"
+            android:textSize="18dp"
+            android:layout_marginBottom="-2dp"
+            android:inputType="number"
+            android:textColor="@android:color/holo_red_dark"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_toEndOf="@+id/et_deley_time"
+            android:gravity="center"
+            android:text="/ms"
+            android:textSize="23dp"
+            android:id="@+id/textView7" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/et_deley_time"
+            android:layout_toStartOf="@+id/textView7"
+
+            />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
